@@ -98,8 +98,8 @@ app.post("/api/restaurant/reserve", function(req, res) {
 app.get("/api/restaurant/clear", function(req, res) {
     reservations = [];
     waitlist = [];
-
-    res.send("Reservations have been cleared");
+    console.log("Table has been cleared")
+    res.sendFile(path.join(__dirname, "index.html"));
 
 })
 
