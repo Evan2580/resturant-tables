@@ -95,7 +95,7 @@ app.post("/api/restaurant/reserve", function(req, res) {
   res.end();
 });
 
-app.delete("/api/restaurant/clear", function(req, res) {
+app.get("/api/restaurant/clear", function(req, res) {
     reservations = [];
     waitlist = [];
 
