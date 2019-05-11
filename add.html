@@ -11,18 +11,25 @@
 </head>
 
 <body>
-        <div class="card mb-4">
+
+        <div class="container">
+
                 <div class="jumbotron">
-                <div class="card-body">
-                  <table class="table table-sm table-hover" id='restaurant-table'>
-            <h1 style="text-align:center;">Hot Restaurant</h1>
-            <p style="text-align:center;">Make Your Reservation</p>
-          </div>
-        </div>
+                    <h1 class="text-center"><span class="glyphicon glyphicon-fire"></span> Hot Restaurant</h1>
+                    <hr>
+                    <h2 class="text-center">Make Your Reservation</h2>
+                    <br>
+        
+                    <div class="text-center">
+                        <a href="/"><button type="button" class="btn btn-lg btn-primary" id = "reservation"><span class="glyphicon glyphicon-credit-card"></span> View Table</button></a>
+                        <a href="/"><button type="button" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-home"></span></button></a>
+                    </div>
+                </div>
+    
     
         
                           
-            <div class="card mb-4">
+            <div class="card md-4">
                 <div class="card-header">Table Reservation</div>
                     <div class="card-body">
                   
@@ -47,6 +54,12 @@
         <input type="submit" value="Submit">
     </div>
 </form>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+</style>
 
 </body>
 
