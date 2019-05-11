@@ -49,9 +49,29 @@
     <div class="form-group">
         <label for="role-input"> Unique ID</label>
             <input class="form-control" id="unique-id" placeholder="Unique ID"text">
-        <input type="submit" value="Submit">
     </div>
+    <button id="post-btn">Reserve</button>
 </form>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        
+        $("#post-btn").click(function () {
+            event.preventDefault();
+            
+            $.post("/api/restaurant/reserve",
+            {
+                customerID: $("#unique-id").val().trim(),
+                customerName: $("#name-input").val().trim(),
+                customerEmail: $("#email-input").val().trim(),
+                phoneNumber: $("#Phone-Number-input").val().trim()
+            },
+            function(data, status){
+                console.log("Status: " + status);
+            });
+        });
+    });
+</script>
 
 </body>
 
