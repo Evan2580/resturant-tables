@@ -17,37 +17,37 @@ app.use(express.json());
 // =============================================================
 var reservations = [
     {
-    "customerName": "Ahmed",
-    "customerEmail": "afhaque89@gmail.com",
-    "customerID": "afhaque89",
-    "phoneNumber": "979-587-0887"
+        customerName: "Ahmed",
+        customerEmail: "afhaque89@gmail.com",
+        customerID: "afhaque89",
+        phoneNumber: "979-587-0887"
     },
     {
-    "customerName": "dghdfg",
-    "phoneNumber": "8888888888",
-    "customerEmail": "dan@dan.com",
-    "customerID": "12123431424242344354"
+        customerName: "dghdfg",
+        phoneNumber: "8888888888",
+        customerEmail: "dan@dan.com",
+        customerID: "12123431424242344354"
     },
     {
-    "customerName": "Dustin Sparks",
-    "phoneNumber": "1234567890",
-    "customerEmail": "test@test.com",
-    "customerID": "1234"
+        customerName: "Dustin Sparks",
+        phoneNumber: "1234567890",
+        customerEmail: "test@test.com",
+        customerID: "1234"
     }
-    ];
+];
 
 var waitlist = [
     {
-    customerName: "1234",
-    phoneNumber: "66767766",
-    customerEmail: "dan@dan.com",
-    customerID: "1234567",
+        customerName: "1234",
+        phoneNumber: "66767766",
+        customerEmail: "dan@dan.com",
+        customerID: "1234567",
     },
     {
-    customerName: "234235",
-    phoneNumber: "66767766",
-    customerEmail: "dan@dan.com",
-    customerID: "1234567",
+        customerName: "234235",
+        phoneNumber: "66767766",
+        customerEmail: "dan@dan.com",
+        customerID: "1234567",
     }
 ];
 // Routes
