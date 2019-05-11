@@ -4,7 +4,8 @@
   "description": "Create a reservation list for a restaurant and if it is full push the next customer to the wait list",
   "main": "tables.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node tables.js"
   },
   "repository": {
     "type": "git",
