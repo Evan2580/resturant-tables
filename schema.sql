@@ -20,24 +20,14 @@ CREATE TABLE IF NOT EXISTS waitlist(
     PRIMARY KEY (customerID)
 );
 
+INSERT INTO reservations ( customerID, customerName, phoneNumber, customerEmail )
+VALUES ("afhaque89", "Ahmed", "979-587-0887", "afhaque89@gmail.com" ),
+(("12123431424242344354", "dghdfg", "8888888888", "dan@dan.com" ),
+("1234", "Dustin Sparks", "1234567890", "test@test.com" ));
+
+INSERT INTO waitlist ( customerID, customerName, phoneNumber, customerEmail )
+VALUES ("afhaque89", "1234", "66767766", "dan@dan.com" ),
+("12123431424242344354", "1234567", "66767766", "dan@dan.com");
 
 SELECT * FROM reservations ORDER BY customerName;
 SELECT * FROM waitlist ORDER BY customerName;
-
-INSERT INTO products ( product_name, department_name, price, stock_quantity )
-VALUES ("iphone", "electronics", 1000, 100 ),
-("imac", "electronics", 2000, 20 ),
-("XZ5 Compact", "electronics", 1000, 100 ),
-("Learning Javascript for Dummies", "books", 5.99, 50 ),
-("How to Hack GitHub", "books", 4.99, 15 ),
-("No Comment T-Shirt", "clothing", 19.99, 20 ),
-("Diesel Logo T-Shirt", "clothing", 1000, 100 ),
-("LG UHD 65\"", "tv", 2199.99, 5 ),
-("LG UHD 55\"", "tv", 1600, 8 ),
-("Balenciaga", "HandBags", 1000, 100 );
-
-SELECT * FROM products ORDER BY product_name;
-
-UPDATE products SET stock_quantity = 100 WHERE id = 1;
-
-SELECT * FROM products WHERE id = 1;
