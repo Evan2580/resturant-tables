@@ -1,0 +1,19 @@
+{
+  "name": "resturant-tables",
+  "version": "1.0.0",
+  "description": "Create a reservation list for a restaurant and if it is full push the next customer to the wait list",
+  "main": "tables.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Evan2580/resturant-tables.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Evan2580/resturant-tables/issues"
+  },
+  "homepage": "https://github.com/Evan2580/resturant-tables#readme"
+}
