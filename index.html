@@ -22,7 +22,7 @@
 			<br>
 
 			<div class="text-center">
-				<a href="/reserve"><button type="button" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-credit-card"></span> Make Reservation</button></a>
+				<a href="/reserve"><button type="button" class="btn btn-lg btn-danger" id = "reservation"><span class="glyphicon glyphicon-credit-card"></span> Make Reservation</button></a>
 				<a href="/"><button type="button" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-home"></span></button></a>
 			</div>
 		</div>
@@ -36,6 +36,10 @@
 						<h4 class="panel-title">Current Reservations</h4>
 					</div>
 					<div class="panel-body" id="tableSection">
+              <span id = "name"></span>
+              <span id = "email"></span>
+              <span id = "id"></span>
+              <span id = "phoneNumber"></span>
 					</div>
 				</div>
 
@@ -54,10 +58,28 @@
 	    <footer class="footer">
 	      <div class="container">
 	      	<p>Control Panel</p>
-	        <p><a href="#" id="clear">Clear Table</a> | <a href="/api/tables">API Table Link</a> | <a href="/api/waitlist">API Wait List</a></p>
+	        <p><a href="/api/restaurant/clear" id="clear">Clear Table</a> | <a href="/api/tables">API Table Link</a> | <a href="/api/waitlist">API Wait List</a></p>
 	      </div>
 	    </footer>
 
 	</div>
+  <script type="text/javascript">
+    $("#reservation").on("click", function() {
 
+      $.get("/api/restaurant/reservations" , function(data) {
+        console.log(data);
+        if (data) {
+          $("#stats").show();
+          $("#name").text(data.customerName);
+          $("#email").text(data.customerEmail);
+          $("#id").text(data.customerID);
+          $("#phoneNumber").text(data.phoneNumber);
+        }
+        else {
+          $("#name").text("No Reservations found!");
+          $("#stats").hide();
+        }
+      });
+    });
+  </script>
 </body>
